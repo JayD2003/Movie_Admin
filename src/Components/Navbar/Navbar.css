@@ -1,0 +1,17 @@
+img{
+    width: 170px;
+    height: 80px;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav{
+    font-size: 25px;
+    display: flex;
+    gap: 10px;
+}
