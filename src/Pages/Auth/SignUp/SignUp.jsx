@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useNavigate } from 'react';
 import './SignUp.css';
 import {toast} from 'react-toastify'
 
@@ -7,6 +7,8 @@ const SignUp = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
 
     const handleSignup = async () => {
         try {
@@ -28,6 +30,7 @@ const SignUp = () => {
             toast.success('Admin Registration Successful', {
               position: toast.POSITION.TOP_CENTER,
             });
+            navigate("/");  
           } else {
             // Handle signup error
             console.error('Admin registration failed', response.statusText);
