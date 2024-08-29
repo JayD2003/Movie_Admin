@@ -26,7 +26,7 @@ const LoginIn = () => {
         toast.success('Admin Login Successful', {
           position: toast.POSITION.TOP_CENTER,
         });
-        navigate("/home");
+        navigate("/");
 
       } else {
         // Handle login error
