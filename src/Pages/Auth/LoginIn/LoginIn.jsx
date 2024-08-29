@@ -9,7 +9,6 @@ const LoginIn = () => {
 
   const handleLogin = async () => {
     try {
-      c=1;
       const response = await fetch(import.meta.env.VITE_BACKEND_API + '/admin/login', {
         method: 'POST',
         headers: {
