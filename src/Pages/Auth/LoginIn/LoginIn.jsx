@@ -9,6 +9,7 @@ const LoginIn = () => {
 
   const handleLogin = async () => {
     try {
+      c=1;
       const response = await fetch(import.meta.env.VITE_BACKEND_API + '/admin/login', {
         method: 'POST',
         headers: {
@@ -27,7 +28,6 @@ const LoginIn = () => {
           position: toast.POSITION.TOP_CENTER,
         });
         navigate("/");
-
       } else {
         // Handle login error
         console.error('Admin login failed', response.statusText);
@@ -44,7 +44,8 @@ const LoginIn = () => {
     }
   }
 
-  
+
+
   return (
     <div className='formpage'>
       <input

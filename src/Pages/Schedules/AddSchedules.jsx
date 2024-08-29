@@ -18,7 +18,6 @@ const AddSchedules = () => {
       const res = await fetch(`${import.meta.env.VITE_BACKEND_API}/movie/movies`)
       const data = await res.json()
       setMovies(data.data)
-      console.log(data.data)
     }
   
     React.useEffect(() => {

@@ -1,15 +1,14 @@
 import React from 'react'
-import { useState, useNavigate } from 'react';
+import { useState } from 'react';
 import './SignUp.css';
 import {toast} from 'react-toastify'
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
-
-
     const handleSignup = async () => {
         try {
       console.log(import.meta.env.VITE_BACKEND_API);
@@ -30,7 +29,7 @@ const SignUp = () => {
             toast.success('Admin Registration Successful', {
               position: toast.POSITION.TOP_CENTER,
             });
-            navigate("/");  
+            navigate("/");
           } else {
             // Handle signup error
             console.error('Admin registration failed', response.statusText);

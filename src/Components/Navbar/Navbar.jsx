@@ -18,11 +18,13 @@ const Navbar = () => {
             if (response.ok) {
                 // Admin is authenticated
                 setIsAdminAuthenticated(true);
+                console.log("Admin Authentication Completed")
             } else {
                 // Admin is not authenticated
                 setIsAdminAuthenticated(false);
                
             }
+            console.log(response)
         }
         catch (error) {
             console.error('An error occurred during admin authentication check', error);
@@ -34,6 +36,7 @@ const Navbar = () => {
     useEffect(() => {
         checkAdminAuthentication();
     }, []);
+
     return (
         <div className="navbar">
             <img src="https://getlogo.net/wp-content/uploads/2020/04/bookmyshow-logo-vector.png" alt="" />
