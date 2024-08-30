@@ -11,7 +11,6 @@ const SignUp = () => {
     const navigate = useNavigate();
     const handleSignup = async () => {
         try {
-      console.log(import.meta.env.VITE_BACKEND_API);
           const response = await fetch(import.meta.env.VITE_BACKEND_API+'/admin/register', {
             method: 'POST',
             headers: {

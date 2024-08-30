@@ -22,11 +22,11 @@ const LoginIn = () => {
         const data = await response.json();
         // Handle successful login, e.g., store adminAuthToken in a secure way
         console.log('Admin login successful', data);
-
+        document.cookie = `adminAuthToken=${data.data.adminAuthToken}; path=/; SameSite=Lax`;
         toast.success('Admin Login Successful', {
           position: toast.POSITION.TOP_CENTER,
         });
-        navigate("/");
+        navigate("/home");
       } else {
         // Handle login error
         console.error('Admin login failed', response.statusText);
